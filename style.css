@@ -1,0 +1,140 @@
+:root {
+    --bg-orange: hsl(31, 77%, 52%);
+    --bg-cyan: hsl(184, 100%, 22%);
+    --bg-dark-cyan: hsl(179, 100%, 13%);
+    --clr-text: hsla(0, 0%, 100%, 0.75);
+    --clr-bg: hsl(0, 0%, 95%);
+    --fz-body: 1rem;
+    --ff-primary: 'Lexend Deca', sans-serif;
+    --ff-secondary: 'Big Shoulders Display', cursive;
+} 
+
+/* Attribution */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+h1, p {
+    margin: 0;
+}
+
+h1 {
+    font-family: var(--ff-secondary);
+    color: var(--clr-bg);
+    padding: 1.5rem 0;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+p {
+    color: var(--clr-text);
+    padding-bottom: 5rem; 
+}
+
+img {
+    max-width: 100%;
+    display: block;
+} 
+
+
+body {
+    font-family: var(--ff-primary);
+    font-size: var(--clr-text);
+    padding: 2rem 0;
+}
+
+
+
+.container {
+    max-width: 100rem;
+    margin: 10rem auto;
+    padding: 8rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    box-shadow: 1rem 2rem 5rem rgba(0 0 0 / .2);
+}
+
+.card-1 {
+    background: var(--bg-orange);
+    border-radius: 8px 0 0 8px;
+}
+
+.card-2 {
+    background: var(--bg-cyan);
+}
+.card-3 {
+    background: var(--bg-dark-cyan);
+    border-radius: 0 8px 8px 0;
+}
+
+.card {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    flex-wrap: wrap;
+}
+
+.card-img {
+    width: 5rem;
+    height: 3rem;
+}
+.card-link {
+    padding: .8rem 2rem;
+    background: #fff;
+    border-radius: 30px;
+    font-size: .9rem;
+    text-decoration: none;
+    transition: all .5s ease-in;
+    border: 2px solid #fff;
+    display: inline-block;
+  
+}
+
+.card-1 .card-link {
+    color: var(--bg-orange);
+}
+.card-2 .card-link {
+    color: var(--bg-cyan);
+}
+.card-3 .card-link {
+    color: var(--bg-dark-cyan);
+}
+
+.card-link:hover {
+    background: none;
+    color: #fff;
+}
+
+@media (max-width: 1000px) {
+    .container {
+        padding: 1rem;
+        box-shadow: none;
+    }
+}
+
+@media(max-width: 780px) {
+    .card-1 {
+        border-radius: 8px 0 0;
+    }
+    .card-3 {
+        border-radius: 0 0 8px 8px;
+    }
+}
+@media(max-width: 530px) {
+    .card-1 {
+        border-radius: 8px 8px 0 0;
+    }
+    .card-3 {
+        border-radius: 0 0 8px 8px;
+    }
+}
+
+
+
